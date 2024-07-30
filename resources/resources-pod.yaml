@@ -4,6 +4,7 @@ metadata:
   name: resources-pod
 spec:
   containers:
+
   - name: apache-container
     image: httpd
     resources:
@@ -13,3 +14,12 @@ spec:
       limits:
         cpu: "1000m"
         memory: "256Mi"
+  - name: redis-container
+    image: redis
+    resources:
+      requests:
+        cpu: "400m"
+        memory: "64Mi"
+      limits:
+        cpu: "500m"
+        memory: "128Mi"
