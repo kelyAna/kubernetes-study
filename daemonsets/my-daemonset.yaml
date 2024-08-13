@@ -6,6 +6,8 @@ metadata:
     app: frontend
 
 spec:
+  updateStrategy:
+    type: OnDelete
   template:
     metadata:
       name: pod-web-server
@@ -15,7 +17,7 @@ spec:
     spec:
       containers:
       - name: my-container-nginx
-        image: nginx
+        image: tomcat
       nodeName: minikube-m02
 
   selector:
